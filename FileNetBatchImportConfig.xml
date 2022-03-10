@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<ResourcesConfig>
+<FileNetP8Configuration>
+	<loginCredential ceURL="https://p8dev.antheminc.com/wsi/FNCEWS40MTOM" userID="AG78620" encryptPasswd="kv5tOAgtACMO3lUgxVEW8w==:QDORx0BxqBTFqjc5QHnqvw==" jaasStanza="FileNetP8WSI" objStore="CENTRALCLAIMS" dbConnFlow="1"/>
+	<DBCredential >
+		<DBConnDataSourc dbConnDataSource="jdbc"/>
+		<DBConnCredential dbType="ORACLe" dbHostName="ORACLE" dbPortNum="22" dbName="ECMPRTF" dbUserID="ANKIT" dbEncryptPassw="kv5tOAgtACMO3lUgxVEW8w==:QDORx0BxqBTFqjc5QHnqvw==" />
+		<DBInsetQueryTrans dbInsetQueryTransact="INSERT INTO TABLENAME.SCHEMA(ID,ReqId,TransactionId,ObjectStore,GUID,ReqRecvdDateTime,FNTrackingId,DocClass,DataSource,Status,ReSubmissionFlag,ReSubmissionsDateTime,Operations,ReqCompletedDateTime,FileName,Size,MimeType) VALUES([ID],[TransactionId],[ObjectStore],[GUID],[ReqRecvdDateTime],[FNTrackingId],[DocClass],[DataSource],[Status],[ReSubmissionFlag],[ReSubmissionsDateTime],[Operations],[ReqCompletedDateTime],[FileName],[Size],[MimeType])"  />
+		<DBInsetQueryAudit dbInsertQueryAudit="INSERT INTO TABLENAME.SCHEMA (ID,ReqId,FNTrackingId,CustTrackingID,ReqRecvdDateTime,ReqRecvdLocation,ReqFileName,ObjectStore,DocClass,DataSource,GUID,AddedOn,ResLocation,ResDateTime,ResMessage,ErrLocation,FTPDate,FTPLocation,Status,Comments,ReProcessFlag,TransactionId,Versioning)VALUES([ID],[ReqId],[FNTrackingId],[CustTrackingID],[ReqRecvdDateTime],[ReqRecvdLocation],[ReqFileName],[ObjectStore],[DocClass],[DataSource],[GUID],[AddedOn],[ResLocation],[ResDateTime],[ResMessage],[ErrLocation],[FTPDate],[FTPLocation],[Status],[Comments],[ReProcessFlag],[TransactionId],[Versioning])"/>
+	</DBCredential>
+</FileNetP8Configuration>
+<VendorFileConfig>
+	<EnviornmentConfig envProp="DocumentClass|ContentPath|ResponsePath|ErrorPath"/>
+	<DataType dataType="String|String|String|String|String|String|String"/>
+	<DocumentProperty docProp="DCN|PROVIDERNUM|INQSYSID|CHECKNUM|EDIDCN|MIMETYPE|DocumentTitle|DAte"/>
+	<FileExtention fileExtention=".zip"/>
+	<MimeType mimeType="application/pdf"/>
+	<BatchDirectory>
+		<batchSrcDirec batchDirec="C:\\Users\\AG78620\\EclipseWorkspace\\INSETDOCFILENET\\Res\\Config\\EastClaims\\Batch" />
+		<batchSrcDirec batchDirec="C:\\Users\\AG78620\\EclipseWorkspace\\INSETDOCFILENET\\Res\\Config\\CentralClaims\\Batch1"/>
+		<batchSrcDirec batchDirec="C:\\Users\\AG78620\\EclipseWorkspace\\INSETDOCFILENET\\Res\\Config\\FEP\\Batch"/>
+		
+	</BatchDirectory>
+</VendorFileConfig>
+
+</ResourcesConfig>
